@@ -1,6 +1,23 @@
 import { Link } from 'react-router-dom'
-import {Menu, X} from "lucide-react"
+import { Menu, X } from "lucide-react"
+import { useState } from 'react'
 export default function Header() {
+    const [abierto, setAbierto] = useState(false);
+
+
+    const handleAbierto = () => {
+
+        if (abierto) {
+            setAbierto(false);
+
+        } else {
+            setAbierto(true);
+        }
+
+
+    }
+
+
     return (
         <>
             <header className="w-full bg-white border-b border-slate-200">
@@ -10,34 +27,34 @@ export default function Header() {
 
                         <nav className="hidden md:flex text-sm font-medium text-slate-600  gap-8 items-center ">
 
-                            <Link  className="hover:text-slate-900 transition-colors duration-200" to="/portafolio">Portafolio</Link>
+                            <Link className="hover:text-slate-900 transition-colors duration-200" to="/portafolio">Portafolio</Link>
 
-                            <Link className="hover:text-slate-900 transition-colors duration-200"  to="/informacion">Sobre Mí</Link>
+                            <Link className="hover:text-slate-900 transition-colors duration-200" to="/informacion">Sobre Mí</Link>
 
-                            <Link className="hover:text-slate-900 transition-colors duration-200"  to="/habilidades">Habilidades</Link>
+                            <Link className="hover:text-slate-900 transition-colors duration-200" to="/habilidades">Habilidades</Link>
 
-                            <Link className="hover:text-slate-900 transition-colors duration-200"  to="/experiencia">Experiencia</Link>
+                            <Link className="hover:text-slate-900 transition-colors duration-200" to="/experiencia">Experiencia</Link>
 
-                            <Link className="hover:text-slate-900 transition-colors duration-200"  to="/contacto">Contacto</Link>
+                            <Link className="hover:text-slate-900 transition-colors duration-200" to="/contacto">Contacto</Link>
 
-                      
+
                         </nav>
-                              <button
-                            className='p-2 text-slate-900 md:hidden'
-                            onClick={()=>setOpen(true)}
-                            aria-label='Abrir menu'
 
-                            >
-                                <Menu size={24} />
-                            </button>
-                            <button
-                            className='p-2 text-slate-900 md:hidden'
-                            onClick={()=>setOpen(false)}
-                            aria-label='Cerrar menu'
+                        {abierto ? <X
 
-                            >
-                                <X size={24} />
-                            </button>
+                            className='block md:hidden'
+                            height={24}
+                            values={abierto}
+                        /> : <Menu
+                            values={abierto}
+
+                            height={24}
+                            className='block md:hidden'
+                        />}
+
+
+
+
                     </div>
                 </div>
             </header>
