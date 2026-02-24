@@ -1,28 +1,23 @@
 import { Link } from 'react-router-dom'
 import { Menu, X } from "lucide-react"
 import { useState } from 'react'
+import MobileMenu from './MobileMenu';
 export default function Header() {
-    const [abierto, setAbierto] = useState(false);
+
+    const [isOpen, setIsOpen] = useState(false);
 
 
-    const handleAbierto = () => {
-
-        if (abierto) {
-            setAbierto(false);
-
-        } else {
-            setAbierto(true);
-        }
 
 
-    }
+
+
 
 
     return (
         <>
             <header className="w-full bg-white border-b border-slate-200">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="flex justify-between h-16 md:h-20 items-center">
+                <div className="container max-w-7xl mx-auto px-6 w-full">
+                    <div className="flex justify-between h-16 md:h-20 items-center w-full">
                         <Link className="font-bold tracking-widest text-lg md:text-xl text-slate-900" to="/">MASP</Link>
 
                         <nav className="hidden md:flex text-sm font-medium text-slate-600  gap-8 items-center ">
@@ -40,25 +35,23 @@ export default function Header() {
 
                         </nav>
 
-                        {abierto ? <X
+                        {!isOpen && (
+                            <Menu
+                                className='hover:cursor-pointer md:hidden'
+                                onClick={e => setIsOpen(true)}
 
-                            className='block md:hidden'
-                            height={24}
-                            values={abierto}
-                        /> : <Menu
-                            values={abierto}
-
-                            height={24}
-                            className='block md:hidden'
-                        />}
-
-
-
-
+                            />
+                        )}
                     </div>
                 </div>
             </header>
 
+
+
+            <MobileMenu
+                onClose={() => setIsOpen(false)}
+                isOpen={isOpen}
+            />
         </>
     )
 }
