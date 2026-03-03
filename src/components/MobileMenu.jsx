@@ -13,7 +13,7 @@ const MobileMenu = ({ onClose, isOpen }) => {
             >
 
 
-                <div className={` bg-white p-5 w-[70%] shadow-xl h-full transform transition-transform duration-500 ease-in-out 
+                <div className={` bg-white p-5 w-[70%] shadow-2xl h-full transform transition-transform duration-500 ease-in-out 
                 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`
 
                 }

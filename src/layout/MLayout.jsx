@@ -6,7 +6,7 @@ function MLayout() {
   return (
     <>
         <Header />
-        <main className='container mx-auto'>
+        <main className=''>
             <Outlet></Outlet>
         </main>
         <Footer />

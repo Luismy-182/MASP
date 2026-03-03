@@ -2,8 +2,8 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className="container ">
-        <div className="">@2026 MASP - Desarrollador web</div>
+    <div className="">
+        <div className="text-center p-5">@2026 MASP - Desarrollador web</div>
 
     </div>
   )

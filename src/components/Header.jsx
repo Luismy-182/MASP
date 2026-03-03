@@ -6,13 +6,6 @@ export default function Header() {
 
     const [isOpen, setIsOpen] = useState(false);
 
-
-
-
-
-
-
-
     return (
         <>
             <header className="w-full bg-white border-b border-slate-200">
