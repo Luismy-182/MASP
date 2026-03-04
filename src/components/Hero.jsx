@@ -5,7 +5,6 @@ import { File } from 'lucide-react'
 
 const Hero = () => {
     return (
-
         <>
             <div className='bg-white min-h-[calc(100vh-6rem)] flex items-center'>
                 <div className="max-w-7xl px-6 mx-auto flex flex-col lg:flex-row  justify-between items-center lg:items-center gap-12">
@@ -31,8 +30,6 @@ const Hero = () => {
                             </Link>
                         </div>
                     </div>
-
-
                     <div className="flex flex-1 justify-center lg:justify-end">
                         <img src="/img/mike-tech1.png" alt="img-mike" className='
                        max-h-[83vh] w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.15)] lg:translate-x-8' />
