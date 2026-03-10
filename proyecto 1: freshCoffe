@@ -1,0 +1,37 @@
+Proyecto 1
+
+Nombre del proyecto: FRESH COFFE
+
+¿Para qué sirve?: es una API-REST Full de un quiosco de comida, puedes ordenar tu comida y bebida desde su amplio catalogo de productos, te hace el cálculo en automático de tu pedido, también permite dar de alta nuevos platillos o cancelarlos si se agotaron algunos de sus ingredientes en tiempo real, necesitas estar registrado con lo cual podrás darle seguimiento a tus usuarios
+
+Funciones principales:
+usuario: gestión de pedido, visualización de menú de comida y bebidas clasificados dentro de sus diferentes categorías, cálculo de cuentas en comida seleccionada por el usuario. Incluye Login, registro y validaciones en front en tiempo real. protección del quiosco para usuarios no logueados
+
+Administrador: Gestión de pedidos, y platillos, permite visualizar los pedidos en tiempo real de cada usuario. incluye validación en el backend, permite agotar un producto del quiosco o nuevamente darlo de alta
+
+en cuanto a la autentificación de usuarios se usa "personal access tokens"
+
+el backend esta echo en laravel y ofrece una colección para los json que manda al front
+
+Tecnologías usadas:
+
+en el backend se usa laravel y autentificación por medio de access personal Tokens, migraciones, seeders, controladores, modelos con eloquent y su routing
+
+frontend se ocupa react con context api para el dominio del state global y el uso de sus diferentes hooks como useState, useEffect.
+tambien usamos React router dom para el routing, y useSWR para el estado del servidor
+
+TailwindCSS para el estilo
+
+axios para el consumo de peticiones
+
+Nodejs y Vite vite para la compilación de assets
+
+Composer y laravel
+
+
+
+
+Repositorio github backend:https://github.com/Luismy-182/Laravel-FreshCoffe.git
+Repositorio github frontend:https://github.com/Luismy-182/React-FreshCoffe.git
+
+Demo online (si existe): no pude colocar el demo porque no se me permite en hostings gratuitos la separación de backend y front
