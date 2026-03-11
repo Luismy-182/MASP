@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { File } from 'lucide-react'
+import { FileDown } from 'lucide-react'
 
 
 const Hero = () => {
@@ -21,11 +22,11 @@ const Hero = () => {
 
                                 className="flex gap-2 py-2 px-3 rounded-md border  hover:border-slate-900 transition-colors duration-200
                                 text-slate-600 border-slate-300 hover:text-slate-900 
-                                "
+                                 items-center"
                                 to=""
                             >
-                                <File
-                                    className='inline w-4' />
+                                <FileDown
+                                    className='inline w-4 h-4' />
                                 Descargar CV
                             </Link>
                         </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { File } from 'lucide-react'
+import { File, Code } from 'lucide-react'
 import ProjectSlider from './ProjectSlider'
 
 const SelectWorkCard = () => {
@@ -9,7 +9,7 @@ const SelectWorkCard = () => {
       <div className="mt-20 md:mt-28">
 
         {/* card-1 */}
-        <div className="my-20 md:my-28 py-16 md:py-20 block md:grid md:grid-cols-2 gap-12 bg-white w-full shadow-lg hover:shadow-xl transition-shadow duration-300  px-6 md:px-10 ">
+        <div className="my-20 md:my-28 py-16 md:py-20 block md:grid md:grid-cols-2 gap-12 bg-white w-full shadow-sm hover:shadow-lg transition-shadow duration-300  px-6 md:px-10 rounded-2xl">
 
           <div className="w-full rounded-xl overflow-hidden border aspect-16/10  border-slate-200 bg-slate-100">
             <ProjectSlider />
@@ -33,7 +33,7 @@ const SelectWorkCard = () => {
                                 "
                 to=""
               >
-                <File
+                <Code
                   className='inline w-4 h-4' />
                 Ver código
               </Link>
@@ -44,8 +44,8 @@ const SelectWorkCard = () => {
         </div>
 
         {/* card-2 */}
-        <div className="my-20 md:my-28 py-16 md:py-20 block md:grid md:grid-cols-2 gap-12 bg-white w-full shadow-lg hover:shadow-xl
-transition-shadow duration-300 px-6 md:px-10">
+        <div className="my-20 md:my-28 py-16 md:py-20 block md:grid md:grid-cols-2 gap-12 bg-white w-full shadow-sm hover:shadow-lg
+transition-shadow duration-300 px-6 md:px-10 rounded-2xl">
 
 
           <div className="w-full">
@@ -66,7 +66,7 @@ transition-shadow duration-300 px-6 md:px-10">
                                 "
                 to=""
               >
-                <File
+                <Code
                   className='inline w-4 h-4' />
                 Ver código
               </Link>
@@ -83,8 +83,8 @@ transition-shadow duration-300 px-6 md:px-10">
 
 
         {/* card-3 */}
-        <div className="my-20 md:my-28 py-16 md:py-20 block md:grid md:grid-cols-2 gap-12 bg-white w-full shadow-lg hover:shadow-xl
-transition-shadow duration-300 px-6 md:px-10 ">
+        <div className="my-20 md:my-28 py-16 md:py-20 block md:grid md:grid-cols-2 gap-12 bg-white w-full shadow-sm hover:shadow-lg
+transition-shadow duration-300 px-6 md:px-10 rounded-2xl">
 
           <div className="w-full rounded-xl overflow-hidden border aspect-16/10 border-slate-200 bg-slate-100">
             <ProjectSlider />
@@ -106,7 +106,7 @@ transition-shadow duration-300 px-6 md:px-10 ">
                                 "
                 to=""
               >
-                <File
+                <Code
                   className='inline w-4 h-4' />
                 Ver código
               </Link>
