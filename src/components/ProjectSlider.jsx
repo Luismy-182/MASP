@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react"
-import 'Swiper/css';
+import 'swiper/css';
 
 
 const ProjectSlider = ({ images }) => {
