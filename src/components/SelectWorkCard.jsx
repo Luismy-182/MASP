@@ -4,6 +4,23 @@ import { File, Code } from 'lucide-react'
 import ProjectSlider from './ProjectSlider'
 
 const SelectWorkCard = () => {
+
+  const apv={
+
+  }
+  const devJobs={
+
+  }
+  const freshCoffee={
+
+  }
+  const projects=[
+    apv, 
+    devJobs,
+    freshCoffee
+  ]
+
+
   return (
     <>
       <div className="mt-20 md:mt-28">
@@ -12,7 +29,7 @@ const SelectWorkCard = () => {
         <div className="my-20 md:my-28 py-16 md:py-20 block md:grid md:grid-cols-2 gap-12 bg-white w-full shadow-sm hover:shadow-lg transition-shadow duration-300  px-6 md:px-10 rounded-2xl">
 
           <div className="w-full rounded-xl overflow-hidden border aspect-16/10  border-slate-200 bg-slate-100">
-            <ProjectSlider />
+            <ProjectSlider images={projects} />
           </div>
 
           <div className="w-full">

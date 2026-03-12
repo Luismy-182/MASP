@@ -1,36 +1,47 @@
 import { Swiper, SwiperSlide } from "swiper/react"
+import {Navigation, Pagination} from "swiper/modules"
 import 'swiper/css';
+import 'swiper/css/navigation'; //para la navegacion
+import 'swiper/css/pagination'; //para la navegacion
 
 
 const ProjectSlider = ({ images }) => {
+
+
+
   return (
     <>
+
       <Swiper
-        spaceBetween={50}
-        slidesPerView={3}
-        onSlideChange={() => console.log('Slide change')}
-        onSwiper={(Swiper) => console.log(Swiper)}
+      modules={[Navigation, Pagination]}
+        // spaceBetween={50} solo funciona cuando se muestran 2 juntas  o más
+        slidesPerView={1}
+        navigation
+        pagination={{clickable:true}}
+      // onSlideChange={() => console.log('Slide change')} solo para debugging
+      // onSwiper={(Swiper) => console.log(Swiper)}
       >
-        <SwiperSlide>
-          <div className="object-cover w-full h-full">
-            Slide 1
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="object-cover w-full h-full">
-            Slide 2
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="object-cover w-full h-full">
-            Slide 3
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="object-cover w-full h-full">
-            Slide 4
-          </div>
-        </SwiperSlide>
+
+        {
+          images.map((image, index) => {
+
+          return <SwiperSlide key={index}>
+            <div className="w-full h-full">
+              <img
+              loading="lazy"
+                src={image}
+                className="object-cover w-full h-full"
+                alt="imagen-portafolio"
+              />
+
+            </div>
+          </SwiperSlide>
+
+
+
+        })
+        }
+
 
       </Swiper>
     </>
