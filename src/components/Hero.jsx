@@ -10,7 +10,7 @@ const Hero = () => {
             <div className='bg-white min-h-[calc(100vh-6rem)] flex items-center'>
                 <div className="max-w-7xl px-6 mx-auto flex flex-col lg:flex-row  justify-between items-center lg:items-center gap-12">
                     {/* Textos y botones */}
-                    <div className="">
+                    <div className="mt-10 md:mt-0">
                         <h1 className='max-w-xl text-4xl md:text-5xl  font-bold tracking-tight leading-[1.1] text-slate-900 lg:translate-y-4'>Ingeniería web orientada a rendimiento y escalabilidad.</h1>
 
                         <p className='mt-4 md:mt-5 text-lg md:text-xl leading-relaxed text-slate-600 max-w-xl'>Diseño arquitecturas sólidas enfocadas en performance, mantenibilidad y crecimiento sostenible.</p>
