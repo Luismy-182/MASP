@@ -16,7 +16,6 @@ const SelectWorkCard = () => {
         {
           projects.map((project, index) => <WorkCard proyecto={project} key={project.id} posicion={index}/>)
         }
-
       </div>
 
     </>

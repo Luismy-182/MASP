@@ -5,14 +5,14 @@ import ProjectSlider from './ProjectSlider';
 
 const WorkCard = ({ proyecto, posicion }) => {
 
-    const { id, title, description, tags, images } = proyecto;
+    const { id, title, description, tags, images, backend, frontend } = proyecto;
     const tagColors = {
         React: "bg-blue-100 text-blue-700",
         TailwindCSS: "bg-cyan-100 text-cyan-700",
         Laravel: "bg-red-100 text-red-700",
         MongoDB: "bg-green-100 text-green-700",
         Nodejs: "bg-slate-100 text-green-800",
-        Livewire:"bg-[#fb74ab] text-white"
+        Livewire: "bg-[#fb74ab] text-white"
     };
 
     return (
@@ -33,41 +33,63 @@ const WorkCard = ({ proyecto, posicion }) => {
                                 className={`px-3 py-1 text-sm rounded-full hover:scale-105 transition-transform ${tagColors[tag] || "bg-slate-100 text-slate-700"}`}
                             >
                                 {tag}
-                                </span>
-                        ) )
+                            </span>
+                        ))
                     }</p>
 
-                    {/* Área de botones */ }
-                            < div className = "flex gap-3 mt-6 md:mt-8 " >
+                    {/* Área de botones */}
+                    < div className="flex gap-3 mt-6 md:mt-8 " >
                         <Link
-                            className="py-2 px-6 bg-slate-800 text-white rounded-md hover:bg-slate-900 transition-colors duration-200" to="#">Ver proyecto</Link>
+                            className="py-2 px-6 bg-slate-800 text-white rounded-md hover:bg-slate-900 transition-colors duration-200" to="#">Más Detalles
+                        </Link>
                         <Link
-
                             className="flex gap-2 py-2 px-4 rounded-md border  hover:border-slate-900 transition-colors duration-200
                                 text-slate-600 border-slate-300 hover:text-slate-900 items-center
                                 "
-                            to=""
+                            to={backend}
+                            target='_blank'
                         >
                             <Code
                                 className='inline w-4 h-4' />
-                            Ver código
+
+                            {!frontend ? 'Código fuente' : 'Backend'}
                         </Link>
+                        {frontend && (
+                            <>
+
+                                <Link
+
+                                    className="flex gap-2 py-2 px-4 rounded-md border  hover:border-slate-900 transition-colors duration-200
+                                text-slate-600 border-slate-300 hover:text-slate-900 items-center
+                                "
+                                    to={frontend}
+                                    target='_blank'
+                                >
+                                    <Code
+                                        className='inline w-4 h-4' />
+                                    Frontend
+                                </Link>
+
+                            </>
+
+                        )}
+
                     </div>
-            </div>
+                </div>
 
-            <div
-                className={
-                    `w-full rounded-xl overflow-hidden border aspect-16/10 border-slate-200 bg-slate-100 ${posicion % 2 === 0 ? "md:order-2" : "md:order-1"}
+                <div
+                    className={
+                        `w-full rounded-xl overflow-hidden border aspect-16/10 border-slate-200 bg-slate-100 ${posicion % 2 === 0 ? "md:order-2" : "md:order-1"}
                 `}
-            >
-                <ProjectSlider images={images} />
-            </div>
+                >
+                    <ProjectSlider images={images} />
+                </div>
 
 
 
 
 
-        </div >
+            </div >
 
         </>
     )
