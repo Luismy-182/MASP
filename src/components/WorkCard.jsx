@@ -1,8 +1,7 @@
-import React from 'react'
+
 import { Link } from 'react-router-dom';
 import { Code } from 'lucide-react';
 import ProjectSlider from './ProjectSlider';
-import { slugify } from "../helpers/createSlug.js";
 const WorkCard = ({ proyecto, posicion }) => {
 
     const { id, title, description, tags, images, backend, frontend } = proyecto;
@@ -41,9 +40,9 @@ const WorkCard = ({ proyecto, posicion }) => {
 
                     {/* Área de botones */}
                     < div className="flex gap-3 mt-6 md:mt-8 " >
-                        <a
-                            className="py-2 px-6 bg-slate-800 text-white rounded-md hover:bg-slate-900 transition-colors duration-200" href={`proyecto/${id}`} target="_blank" >Más Detalles
-                        </a>
+                        <Link
+                            className="py-2 px-6 bg-slate-800 text-white rounded-md hover:bg-slate-900 transition-colors duration-200" to={`/proyecto/${id}`}>Más Detalles
+                        </Link>
                         <a
                             className="flex gap-2 py-2 px-4 rounded-md border  hover:border-slate-900 transition-colors duration-200
                                 text-slate-600 border-slate-300 hover:text-slate-900 items-center

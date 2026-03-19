@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { X } from 'lucide-react'
 const MobileMenu = ({ onClose, isOpen }) => {
 
-    console.log(isOpen);
+    
 
     return (
         <>

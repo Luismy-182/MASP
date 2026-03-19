@@ -1,12 +1,8 @@
-import {apv, devJobs, freshCoffee} from '../helpers/projectData.js';
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { File, Code } from 'lucide-react'
-import ProjectSlider from './ProjectSlider'
+import { listaProyectos } from '../helpers/projectData'
 import WorkCard from './WorkCard'
 
 const SelectWorkCard = () => {
-  const projects = [freshCoffee,apv,devJobs];
+  const projects = listaProyectos;
 
 
 
