@@ -2,10 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { Code } from 'lucide-react';
 import ProjectSlider from './ProjectSlider';
-
+import { slugify } from "../helpers/createSlug.js";
 const WorkCard = ({ proyecto, posicion }) => {
 
     const { id, title, description, tags, images, backend, frontend } = proyecto;
+    
+
     const tagColors = {
         React: "bg-blue-100 text-blue-700",
         TailwindCSS: "bg-cyan-100 text-cyan-700",
@@ -39,36 +41,36 @@ const WorkCard = ({ proyecto, posicion }) => {
 
                     {/* Área de botones */}
                     < div className="flex gap-3 mt-6 md:mt-8 " >
-                        <Link
-                            className="py-2 px-6 bg-slate-800 text-white rounded-md hover:bg-slate-900 transition-colors duration-200" to="#">Más Detalles
-                        </Link>
-                        <Link
+                        <a
+                            className="py-2 px-6 bg-slate-800 text-white rounded-md hover:bg-slate-900 transition-colors duration-200" href={`proyecto/${id}`} target="_blank" >Más Detalles
+                        </a>
+                        <a
                             className="flex gap-2 py-2 px-4 rounded-md border  hover:border-slate-900 transition-colors duration-200
                                 text-slate-600 border-slate-300 hover:text-slate-900 items-center
                                 "
-                            to={backend}
+                            href={backend}
                             target='_blank'
                         >
                             <Code
                                 className='inline w-4 h-4' />
 
                             {!frontend ? 'Código fuente' : 'Backend'}
-                        </Link>
+                        </a>
                         {frontend && (
                             <>
 
-                                <Link
+                                <a
 
                                     className="flex gap-2 py-2 px-4 rounded-md border  hover:border-slate-900 transition-colors duration-200
                                 text-slate-600 border-slate-300 hover:text-slate-900 items-center
                                 "
-                                    to={frontend}
+                                    href={frontend}
                                     target='_blank'
                                 >
                                     <Code
                                         className='inline w-4 h-4' />
                                     Frontend
-                                </Link>
+                                </a>
 
                             </>
 
