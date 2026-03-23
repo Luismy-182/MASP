@@ -2,19 +2,13 @@
 import { Link } from 'react-router-dom';
 import { Code } from 'lucide-react';
 import ProjectSlider from './ProjectSlider';
+import { tagColors } from '../helpers/tagColors';
 const WorkCard = ({ proyecto, posicion }) => {
 
     const { id, title, description, tags, images, backend, frontend } = proyecto;
-    
 
-    const tagColors = {
-        React: "bg-blue-100 text-blue-700",
-        TailwindCSS: "bg-cyan-100 text-cyan-700",
-        Laravel: "bg-red-100 text-red-700",
-        MongoDB: "bg-green-100 text-green-700",
-        Nodejs: "bg-slate-100 text-green-800",
-        Livewire: "bg-[#fb74ab] text-white"
-    };
+
+    
 
     return (
         <>
@@ -26,8 +20,8 @@ const WorkCard = ({ proyecto, posicion }) => {
                 >
 
                     <h2 className='text-slate-900 text-3xl md:text-4xl mt-0 mb-5 font-bold'>{title}</h2>
-                    <p className='text-slate-600 mt-6  max-w-2xl leading-relaxed text-lg md:text-xl'>{description}</p>
-                    <p className='flex flex-wrap gap-2 mt-4'>{
+                    <p className='text-slate-600 mt-4  max-w-2xl leading-relaxed text-lg md:text-xl'>{description}</p>
+                    <p className='flex flex-wrap gap-2 mt-6'>{
                         tags.map((tag, index) => (
                             <span
                                 key={index}
