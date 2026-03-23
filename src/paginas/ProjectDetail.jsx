@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { listaProyectos } from '../helpers/projectData';
 import { Link } from 'react-router-dom';
 import { tagColors } from "../helpers/tagColors";
+import ProjectGalery from "../components/ProjectGalery";
 import {
     ShoppingCart,
     ShieldCheck,
@@ -288,8 +289,7 @@ const ProjectDetail = () => {
 
                 </div>
             </section>
-
-
+            <ProjectGalery  galery={images}/>
         </>
     )
 }
