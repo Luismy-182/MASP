@@ -21,7 +21,7 @@ const ProjectGalery = ({ galery }) => {
             <section className="my-24 md:my-32">
                 <div className="max-w-6xl mx-auto">
                     <h2 className='text-slate-800 font-bold text-2xl md:text-4xl text-center'>Galería del producto</h2>
-                    <div className="grid md:grid-cols-2 gap-12 rounded-xl mt-24 md:mt-32 ">
+                    <div className="grid md:grid-cols-2 gap-12 rounded-xl mt-24 md:mt-32 px-6 md:px-0">
                         {
                             galery.map((picture, index) => {
                                 return (
