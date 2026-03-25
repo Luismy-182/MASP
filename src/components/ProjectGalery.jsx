@@ -26,14 +26,13 @@ const ProjectGalery = ({ galery }) => {
                             galery.map((picture, index) => {
                                 return (
                                     <div key={index} className="shadow-sm hover:shadow-lg hover:cursor-pointer  w-full border border-slate-200 bg-white hover:scale-105 transition-all duration-300 overflow-hidden
-                                    h-62.5 md:h-75
+                                    h-62.5 md:h-75 group
                                 "
                                         onClick={e => {
                                             return setSelectedImage(picture);
                                         }}
                                     >
-                                        <img src={picture} alt={`preview-${index}`} className='w-full object-contain bg-slate-100 h-full'
-
+                                        <img src={picture} alt={`preview-${index}`} className='w-full object-contain bg-slate-100 h-full group-hover:scale-110 transition-transform duration-300'
                                         />
 
                                     </div>
