@@ -3,19 +3,21 @@ import { useState } from 'react';
 
 const ProjectGalery = ({ galery }) => {
     //state para saber que imagen picaron
-    const [selectedImage, setSelectedImage] = useState(null);
+    const [currentIndex, setCurrentIndex] = useState(null);
+console.log(currentIndex);
 
-
-
-
-
+    
     return (
 
         <>
-            {selectedImage && (
+            {currentIndex!==null && (
                 <ImageModal
-                    imagen={selectedImage}
-                    onClose={() => setSelectedImage(null)}
+                    currentIndex={currentIndex}
+                    galery={galery}
+                    onClose={() => setCurrentIndex(null)}
+                  
+                    onNext={()=>setCurrentIndex(currentIndex+1)}
+                    onPrev={()=>setCurrentIndex(currentIndex-1)}
                 />
             )}
             <section className="my-24 md:my-32">
@@ -24,12 +26,15 @@ const ProjectGalery = ({ galery }) => {
                     <div className="grid md:grid-cols-2 gap-12 rounded-xl mt-24 md:mt-32 px-6 md:px-0">
                         {
                             galery.map((picture, index) => {
+                                
+                                
                                 return (
+
                                     <div key={index} className="shadow-sm hover:shadow-lg hover:cursor-pointer  w-full border border-slate-200 bg-white hover:scale-105 transition-all duration-300 overflow-hidden
                                     h-62.5 md:h-75 group
                                 "
-                                        onClick={e => {
-                                            return setSelectedImage(picture);
+                                        onClick={()=> {
+                                            return setCurrentIndex(index);
                                         }}
                                     >
                                         <img src={picture} alt={`preview-${index}`} className='w-full object-contain bg-slate-100 h-full group-hover:scale-110 transition-transform duration-300'
