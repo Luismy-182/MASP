@@ -4,20 +4,46 @@ import { useState } from 'react';
 const ProjectGalery = ({ galery }) => {
     //state para saber que imagen picaron
     const [currentIndex, setCurrentIndex] = useState(null);
-console.log(currentIndex);
-
     
+
+    function handleNext() {
+        console.log(currentIndex);
+
+        //el ultimo indice de un arreglo lo obtienes con array.length -1
+        if (currentIndex === galery.length - 1) {
+
+            setCurrentIndex(0);
+
+        } else {
+            setCurrentIndex(currentIndex + 1);
+
+        }
+    }
+
+    function handlePrev() {
+
+        if (currentIndex === 0) {
+            const ultIndice = galery.length - 1;
+            setCurrentIndex(ultIndice);
+
+        } else {
+            setCurrentIndex(currentIndex - 1);
+
+        }
+
+
+    }
     return (
 
         <>
-            {currentIndex!==null && (
+            {currentIndex !== null && (
                 <ImageModal
                     currentIndex={currentIndex}
                     galery={galery}
                     onClose={() => setCurrentIndex(null)}
-                  
-                    onNext={()=>setCurrentIndex(currentIndex+1)}
-                    onPrev={()=>setCurrentIndex(currentIndex-1)}
+
+                    onNext={() => handleNext()}
+                    onPrev={() => handlePrev()}
                 />
             )}
             <section className="my-24 md:my-32">
@@ -26,14 +52,14 @@ console.log(currentIndex);
                     <div className="grid md:grid-cols-2 gap-12 rounded-xl mt-24 md:mt-32 px-6 md:px-0">
                         {
                             galery.map((picture, index) => {
-                                
-                                
+
+
                                 return (
 
                                     <div key={index} className="shadow-sm hover:shadow-lg hover:cursor-pointer  w-full border border-slate-200 bg-white hover:scale-105 transition-all duration-300 overflow-hidden
                                     h-62.5 md:h-75 group
                                 "
-                                        onClick={()=> {
+                                        onClick={() => {
                                             return setCurrentIndex(index);
                                         }}
                                     >
