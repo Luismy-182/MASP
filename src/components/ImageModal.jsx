@@ -16,6 +16,8 @@ const ImageModal = ({ currentIndex, onClose, galery, onNext, onPrev }) => {
     document.body.classList.add('overflow-hidden');
     //escucha por un scape
     function keyFunction(e) {
+      
+
       if (e.key === 'Escape') {
         handleCerrarModal();
         return;
@@ -56,7 +58,7 @@ const ImageModal = ({ currentIndex, onClose, galery, onNext, onPrev }) => {
     setAnimating(true);
     setTimeout(() => {
       onNext();
-        setVisible(true);
+      setVisible(true);
       setAnimating(false);
     }, 200);
 
@@ -88,8 +90,8 @@ const ImageModal = ({ currentIndex, onClose, galery, onNext, onPrev }) => {
   }
   return (
     //fondo overlay
-    <div className={`bg-black/70 backdrop-blur-md fixed inset-0  
-    p-15 flex justify-center h-full items-center hover:cursor-pointer
+    <div className={`bg-black/70 backdrop-blur-md fixed inset-0  z-50
+    md:p-12  flex justify-center h-full items-center hover:cursor-pointer 
     ${isVisible ? 'opacity-100 scale-100 ' : 'opacity-0  scale-105'}
      ease-in-out transition-opacity  duration-200
     `}
@@ -106,18 +108,18 @@ const ImageModal = ({ currentIndex, onClose, galery, onNext, onPrev }) => {
         onClick={(e) => e.stopPropagation()}
 
       >
-        
-        <div className="bg-white/85 backdrop-blur-md rounded-md w-9 hover:cursor-pointer p-1 absolute  md:-right-8 md:-top-12 drop-shadow-xl hover:bg-white/90">
+
+        <div className="bg-white/85 backdrop-blur-md rounded-md w-12 md:w-10 hover:cursor-pointer absolute -bottom-30  md:bottom-auto left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-right-8 md:-top-12 drop-shadow-xl hover:bg-white/90">
           <X className='text-slate-600 w-full h-full  hover:text-slate-800'
             onClick={() => handleCerrarModal()}
           />
         </div>
-        <div className="bg-white/85 backdrop-blur-md rounded-md w-12 hover:cursor-pointer  absolute -bottom-30 md:bottom-[50%] -right-20 drop-shadow-xl hover:bg-white/90">
+        <div className="bg-white/85 backdrop-blur-md rounded-md w-12 hover:cursor-pointer  absolute -bottom-30 md:bottom-[50%]  md:-right-20 right-0 drop-shadow-xl hover:bg-white/90">
           <ArrowRight className='text-slate-600 w-full h-full  hover:text-slate-800'
             onClick={() => handleSiguienteImg()}
           />
         </div>
-        <div className="bg-white/85 backdrop-blur-md rounded-md w-12 hover:cursor-pointer  absolute -bottom-30 -left-20 md:bottom-[50%] md:-right-10 drop-shadow-xl hover:bg-white/90">
+        <div className="bg-white/85 backdrop-blur-md rounded-md w-12 hover:cursor-pointer  absolute -bottom-30  left-0 md:-left-20 md:bottom-[50%] drop-shadow-xl hover:bg-white/90">
           <ArrowLeft className='text-slate-600 w-full h-full  hover:text-slate-800'
             onClick={() => handleAnteriorImg()}
           />

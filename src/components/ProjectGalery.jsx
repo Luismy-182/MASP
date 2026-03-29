@@ -7,7 +7,7 @@ const ProjectGalery = ({ galery }) => {
     
 
     function handleNext() {
-        console.log(currentIndex);
+        
 
         //el ultimo indice de un arreglo lo obtienes con array.length -1
         if (currentIndex === galery.length - 1) {
@@ -47,7 +47,7 @@ const ProjectGalery = ({ galery }) => {
                 />
             )}
             <section className="my-24 md:my-32">
-                <div className="max-w-6xl mx-auto">
+                <div className="max-w-6xl mx-auto md:px-6 lg:px-0">
                     <h2 className='text-slate-800 font-bold text-2xl md:text-4xl text-center'>Galería del producto</h2>
                     <div className="grid md:grid-cols-2 gap-12 rounded-xl mt-24 md:mt-32 px-6 md:px-0">
                         {
@@ -63,7 +63,7 @@ const ProjectGalery = ({ galery }) => {
                                             return setCurrentIndex(index);
                                         }}
                                     >
-                                        <img src={picture} alt={`preview-${index}`} className='w-full object-contain bg-slate-100 h-full group-hover:scale-110 transition-transform duration-300'
+                                        <img src={picture} alt={`preview-${index}`} className='w-full object-contain bg-slate-200 h-full group-hover:scale-110 transition-transform duration-300'
                                         />
 
                                     </div>

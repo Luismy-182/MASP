@@ -1,15 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link} from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 import { X } from 'lucide-react'
 const MobileMenu = ({ onClose, isOpen }) => {
 
-    
+
 
     return (
         <>
             <div className={`md:hidden fixed inset-0 z-50 flex justify-end transition-opacity   duration-300
                 ${isOpen ? 'bg-black/50 opacity-100' : 'bg-transparent opacity-0 pointer-events-none'}`}
-            onClick={onClose}
+                onClick={onClose}
             >
 
 
@@ -28,30 +29,12 @@ const MobileMenu = ({ onClose, isOpen }) => {
                     </div>
 
                     <nav className="flex flex-col text-sm font-medium text-slate-600  gap-8 items-start">
+                        <HashLink className="hover:text-slate-900 transition-colors duration-200" smooth to="#proyectos">Portafolio</HashLink>
 
 
+                        <HashLink className="hover:text-slate-900 transition-colors duration-200" smooth to="#sobre-mi">Sobre Mí</HashLink>
 
-
-
-
-                        <Link className="hover:text-slate-900 transition-colors duration-200" to="/portafolio"
-                            onClick={onClose}
-                        >Portafolio</Link>
-
-                        <Link className="hover:text-slate-900 transition-colors duration-200" to="/informacion"
-                            onClick={onClose}
-                        >Sobre Mí</Link>
-
-                        <Link className="hover:text-slate-900 transition-colors duration-200" to="/habilidades" onClick={onClose}
-                        >Habilidades</Link>
-
-                        <Link className="hover:text-slate-900 transition-colors duration-200" to="/experiencia" onClick={onClose}
-                        >Experiencia</Link>
-
-                        <Link className="hover:text-slate-900 transition-colors duration-200" to="/contacto"
-                            onClick={onClose}
-                        >Contacto</Link>
-
+                        <HashLink className="hover:text-slate-900 transition-colors duration-200" smooth to="#contacto">Contacto</HashLink>
 
                     </nav>
 

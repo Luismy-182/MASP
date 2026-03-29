@@ -74,7 +74,7 @@ const ProjectDetail = () => {
             <section>
                 <div className="mx-auto bg-white">
 
-                    <div className="md:flex justify-between lg:items-center gap-8 px-6 md:px-24  py-24 md:py-32 items-center w-full min-h-[calc(100vh-6rem)]">
+                    <div className="md:flex justify-between lg:items-center gap-8 px-6 lg:px-24  py-12 lg:py-32 items-center w-full min-h-[calc(100vh-6rem)]">
                         <div className="md:w-[35%] pb-12">
 
                             <h2 className="max-w-xl text-4xl md:text-5xl  font-bold tracking-tight leading-[1.1] text-slate-900 lg:translate-y-4">{heroTitle}</h2>
@@ -91,39 +91,33 @@ const ProjectDetail = () => {
                             }</p>
 
                             {/* Área de botones */}
-                            < div className="flex gap-3 mt-6 md:mt-8 " >
+                            <div className="flex gap-3 mt-8 ">
+                                <div className="text-base">
 
-                                <a
-                                    className="flex gap-2 py-2 px-6 rounded-md   bg-slate-800 transition-colors duration-200
-                                text-white border-slate-300 hover:bg-slate-900 items-center
-                                font-bold
-                                "
-                                    href={backend}
-                                    target='_blank'
-                                >
-                                    <Code
-                                        className='inline w-4 h-4' />
+                                    <a
+                                        className="flex gap-2 py-2 px-3 md:px-6 rounded-md bg-slate-800 text-white items-center font-bold hover:bg-slate-900 transition-colors duration-200"
+                                        href={backend}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <Code className="w-4 h-4" />
+                                        {!frontend ? 'Ver código fuente' : 'Ver backend'}
+                                    </a>
+                                </div>
 
-                                    {!frontend ? 'Ver código fuente' : 'Ver backend'}
-                                </a>
                                 {frontend && (
-                                    <>
+                                    <div className="text-base">
 
                                         <a
-
-                                            className="flex gap-2 py-2 px-6 rounded-md border  hover:border-slate-900 transition-colors duration-200
-                                text-slate-600 border-slate-300 hover:text-slate-900 items-center
-                                "
+                                            className="flex gap-2 py-2 px-3 md:px-6 rounded-md border border-slate-300 text-slate-600 items-center hover:border-slate-900 hover:text-slate-900 transition-colors duration-200"
                                             href={frontend}
-                                            target='_blank'
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                         >
-                                            <Code
-                                                className='inline w-4 h-4' />
+                                            <Code className="w-4 h-4" />
                                             Ver frontend
                                         </a>
-
-                                    </>
-
+                                    </div>
                                 )}
 
                             </div>
@@ -151,17 +145,17 @@ const ProjectDetail = () => {
                         Problema y contexto
                     </h2>
 
-                    <p className="text-xl text-slate-600 text-center mt-6">Análisis del problema real y el contexto operativo del sistema</p>
+                    <p className="text-xl text-slate-600 text-center mt-6 px-6">Análisis del problema real y el contexto operativo del sistema</p>
                 </div>
-                <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 ">
+                <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-6">
 
 
-                    <div className=" p-6 bg-white shadow-sm hover:shadow-lg rounded-xl">
+                    <div className="p-6 bg-white shadow-sm hover:shadow-lg rounded-xl">
                         <h3 className="text-xl md:text-2xl  font-bold tracking-tight leading-[1.1] text-slate-900  text-center py-3">
                             Problema
                         </h3>
 
-                        <p className="text-slate-600 leading-relaxed">
+                        <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
                             {trouble}
                         </p>
                     </div>
@@ -172,7 +166,7 @@ const ProjectDetail = () => {
                             Contexto
                         </h3>
 
-                        <p className="text-slate-600 leading-relaxed">
+                        <p className="text-base md:text-lg text-slate-600 leading-relaxed">
                             {context}
                         </p>
                     </div>
@@ -183,7 +177,7 @@ const ProjectDetail = () => {
                             Impacto
                         </h3>
 
-                        <p className="text-slate-600 leading-relaxed">
+                        <p className="text-base md:text-lg text-slate-600 leading-relaxed">
                             Antes de implementar una solución digital:</p>
                         <ul className="pl-5 list-disc">
                             {impact.map((impacts, index) => {
@@ -221,7 +215,7 @@ const ProjectDetail = () => {
                 <div className="mx-auto py-12 px-6 mt-12 max-w-4xl border-t-2 border-slate-200">
                     <h2 className="text-4xl text-center text-slate-800 font-bold">Resultados</h2>
 
-                    <div className="bg-slate-50 rounded-lg mt-12 md:mt-14 md:py-8 ">
+                    <div className="bg-slate-50 rounded-lg mt-12 md:mt-14 py-8 ">
 
                         <ul className="pl-5 space-y-10">
 
@@ -249,10 +243,10 @@ const ProjectDetail = () => {
 
 
             <section className="my-24 md:my-32">
-                <div className="max-w-6xl mx-auto">
+                <div className="max-w-6xl mx-auto px-6">
                     <h2 className="text-2xl md:text-4xl text-center text-slate-800 font-bold uppercase">Capacidades del sistema</h2>
                     <p className="text-xl md:text-2xl text-slate-600 text-center mt-6">Funcionalidades principales del sistema</p>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-24 md:mt-32">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-24 md:mt-32  md:px-0">
                         {
                             features.map((feature, index) => {
                                 const Icon = iconFeatures[feature.icon] || Code;
@@ -289,7 +283,7 @@ const ProjectDetail = () => {
 
                 </div>
             </section>
-            <ProjectGalery  galery={images}/>
+            <ProjectGalery galery={images} />
         </>
     )
 }

@@ -7,14 +7,11 @@ const WorkCard = ({ proyecto, posicion }) => {
 
     const { id, title, description, tags, images, backend, frontend } = proyecto;
 
-
-    
-
     return (
         <>
             {/* card-1 */}
             <div className="my-20 md:my-28 py-16 md:py-20 block md:grid  
-            md:grid-cols-2 gap-12 bg-white w-full shadow-sm hover:shadow-lg transition-shadow duration-300  px-6 md:px-10 rounded-2xl">
+            md:grid-cols-2 gap-12 bg-white w-full shadow-sm hover:shadow-lg transition-shadow duration-300 px-6 md:px-10 rounded-2xl">
                 <div
                     className={`w-full mb-12 md:mb-0 ${posicion % 2 === 0 ? "md:order-1" : "md:order-2"}`}
                 >
@@ -33,13 +30,13 @@ const WorkCard = ({ proyecto, posicion }) => {
                     }</p>
 
                     {/* Área de botones */}
-                    < div className="flex gap-3 mt-6 md:mt-8 " >
+                    < div className="flex flex-col lg:flex-row gap-6 md:gap-3 mt-8" >
                         <Link
-                            className="py-2 px-6 bg-slate-800 text-white rounded-md hover:bg-slate-900 transition-colors duration-200" to={`/proyecto/${id}`}>Más Detalles
+                            className="py-2 px-6 font-semibold bg-slate-800 text-white rounded-md hover:bg-slate-900 transition-colors duration-200 text-center" to={`/proyecto/${id}`}>Más Detalles
                         </Link>
                         <a
                             className="flex gap-2 py-2 px-4 rounded-md border  hover:border-slate-900 transition-colors duration-200
-                                text-slate-600 border-slate-300 hover:text-slate-900 items-center
+                                text-slate-600 border-slate-300 hover:text-slate-900 items-center justify-center
                                 "
                             href={backend}
                             target='_blank'
@@ -47,7 +44,7 @@ const WorkCard = ({ proyecto, posicion }) => {
                             <Code
                                 className='inline w-4 h-4' />
 
-                            {!frontend ? 'Código fuente' : 'Backend'}
+                            {!frontend ? 'Código fuente' : 'Ver Backend'}
                         </a>
                         {frontend && (
                             <>
@@ -55,14 +52,14 @@ const WorkCard = ({ proyecto, posicion }) => {
                                 <a
 
                                     className="flex gap-2 py-2 px-4 rounded-md border  hover:border-slate-900 transition-colors duration-200
-                                text-slate-600 border-slate-300 hover:text-slate-900 items-center
+                                text-slate-600 border-slate-300 hover:text-slate-900 items-center justify-center
                                 "
                                     href={frontend}
                                     target='_blank'
                                 >
                                     <Code
                                         className='inline w-4 h-4' />
-                                    Frontend
+                                    Ver Frontend
                                 </a>
 
                             </>

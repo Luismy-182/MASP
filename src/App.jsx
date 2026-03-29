@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import MASP from "./paginas/MASP";
-import About from "./paginas/About";
-import Skills from "./paginas/Skills";
-import Projects from "./paginas/Projects";
-import Experience from "./paginas/Experience";
-import Contact from "./paginas/Contact";
+import MASP from "./pages/MASP";
+import About from "./pages/About";
+import Skills from "./pages/Skills";
+import Projects from "./pages/Projects";
+import Experience from "./pages/Experience";
+import Contact from "./pages/Contact";
 import Header from './components/Header';
 import Footer from './components/Footer';
 import MLayout from './layout/MLayout';
-import ProjectDetail from './paginas/ProjectDetail';
+import ProjectDetail from './pages/ProjectDetail';
 
 function App() {
 
@@ -16,12 +16,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MLayout />}>
-          <Route index element={<MASP />} />
-          <Route path="informacion" element={<About />} />
-          <Route path="habilidades" element={<Skills />} />
-          <Route path="portafolio" element={<Projects />} />
-          <Route path="experiencia" element={<Experience />} />
-          <Route path="contacto" element={<Contact />} />
+          <Route index element={<MASP />} /> 
           <Route path="proyecto/:id" element={<ProjectDetail />} />
         </Route>
       </Routes>
