@@ -10,7 +10,7 @@ const Hero = ({ id }) => {
         <>
             <div className='bg-white min-h-[calc(100vh-6rem)] flex items-center scroll-mt-24'
                 id={id}
-               
+
             >
                 <div className="max-w-7xl px-6 mx-auto flex flex-col lg:flex-row  justify-between items-center lg:items-center gap-12">
                     {/* Textos y botones */}
@@ -36,8 +36,14 @@ const Hero = ({ id }) => {
                         </div>
                     </div>
                     <div className="flex flex-1 justify-center lg:justify-end">
-                        <img src="/img/mike-tech1.png" alt="img-mike" className='
+                        <picture>
+                            <source srcSet="/img/profile/mike-tech1.avif" type="image/avif" />
+                            <source srcSet="/img/profile/mike-tech1.webp" type="image/webp" />
+
+                            <img loading='lazy' src="/img/profile/mike-tech1.png" alt="img-mike" className='
                        max-h-[83vh] w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.15)] lg:translate-x-8' />
+                        </picture>
+
                     </div>
                 </div>
             </div>
