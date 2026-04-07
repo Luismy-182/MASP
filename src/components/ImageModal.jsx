@@ -103,7 +103,7 @@ const ImageModal = ({ currentIndex, onClose, galery, onNext, onPrev }) => {
 
       {/* <!--contenedor --> */}
       <div
-        className={`relative max-w-[85%] hover:cursor-auto ${isVisible ? 'opacity-100 transform scale-100' : 'opacity-0 transform scale-95'}
+        className={`relative max-w-[85%] hover:cursor-auto md:max-w-[75%] ${isVisible ? 'opacity-100 transform scale-100' : 'opacity-0 transform scale-95'}
      ease-in-out transition-all  duration-200`}
         onClick={(e) => e.stopPropagation()}
 
