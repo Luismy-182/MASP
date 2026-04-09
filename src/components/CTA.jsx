@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CTA = ({id}) => {
+const CTA = ({ id }) => {
     return (
         <section className="bg-white py-24 md:py-32 scroll-mt-24" id={id} >
             <div className="max-w-6xl mx-auto px-6">
@@ -11,9 +11,11 @@ const CTA = ({id}) => {
                 <div className="flex justify-center mt-10 gap-5 max-w-lg mx-auto text-center">
                     <a href="mailto:miguel.buny@gmail.com"
                         className='bg-slate-800 px-6 py-3 rounded-md font-semibold text-white hover:bg-slate-900 flex-1  transition-colors duration-300'
-                        
+
                     >Contactar</a>
-                    <a href="#"
+                    <a
+                        href="storage/miguel_suarez_backend_developer.pdf"
+                        download='miguel_suarez_backend.pdf'
                         className='border  border-slate-200 text-slate-700 px-6 py-3 rounded-md font-semibold hover:border-slate-900  flex-1 transition-colors duration-300'
                     >Ver CV</a>
 

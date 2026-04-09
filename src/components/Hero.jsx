@@ -14,25 +14,27 @@ const Hero = ({ id }) => {
             >
                 <div className="max-w-7xl px-6 mx-auto flex flex-col lg:flex-row  justify-between items-center lg:items-center gap-12">
                     {/* Textos y botones */}
-                    <div className="mt-24 md:mt-0">
+                    <div className="mt-6 md:mt-0">
+                        <p className='text-sm text-slate-400 m-0 tracking-widest uppercase'>Backend · Arquitectura · Rendimiento</p>
                         <h1 className='max-w-xl text-4xl md:text-5xl  font-bold tracking-tight leading-[1.1] text-slate-900 lg:translate-y-4'>Ingeniería web orientada a rendimiento y escalabilidad.</h1>
 
-                        <p className='mt-4 md:mt-5 text-lg md:text-xl leading-relaxed text-slate-600 max-w-xl'>Diseño arquitecturas sólidas enfocadas en performance, mantenibilidad y crecimiento sostenible.</p>
+                        <p className='mt-4 md:mt-5 text-lg md:text-xl leading-relaxed text-slate-600 max-w-xl'>Desarrollo backend y arquitectura de sistemas enfocados en rendimiento, escalabilidad y mantenibilidad.</p>
                         {/* Área de botones */}
                         <div className="flex gap-3 mt-6 md:mt-8">
                             <HashLink
-                                className="py-2 px-6 bg-slate-800 text-white rounded-md hover:bg-slate-900 transition-colors duration-200" smooth to="#proyectos">Ver proyectos</HashLink>
-                            <Link
+                                className="py-2 px-3 lg:px-6 bg-slate-800 text-white rounded-md hover:bg-slate-900 transition-colors duration-200" smooth to="#proyectos">Ver proyectos</HashLink>
+                            <a
 
-                                className="flex gap-2 py-2 px-3 rounded-md border  hover:border-slate-900 transition-colors duration-200
+                                className="flex gap-2 py-2 px-3 lg:px-8 rounded-md border  hover:border-slate-900 transition-colors duration-200
                                 text-slate-600 border-slate-300 hover:text-slate-900 
-                                 items-center"
-                                to=""
+                                 items-center hover:cursor-pointer"
+                                href="storage/miguel_suarez_backend_developer.pdf"
+                                download='miguel_suarez_backend.pdf'
                             >
                                 <FileDown
                                     className='inline w-4 h-4' />
                                 Descargar CV
-                            </Link>
+                            </a>
                         </div>
                     </div>
                     <div className="flex flex-1 justify-center lg:justify-end">

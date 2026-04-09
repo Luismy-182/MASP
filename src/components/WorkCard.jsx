@@ -30,7 +30,7 @@ const WorkCard = ({ proyecto, posicion }) => {
                     }</p>
 
                     {/* Área de botones */}
-                    < div className="flex flex-col lg:flex-row gap-6 md:gap-3 mt-8" >
+                    < div className="flex flex-col lg:flex-row gap-4 md:gap-3 mt-8" >
                         <Link
                             className="py-2 px-6 font-semibold bg-slate-800 text-white rounded-md hover:bg-slate-900 transition-colors duration-200 text-center" to={`/proyecto/${id}`}>Más Detalles
                         </Link>

@@ -37,7 +37,9 @@ export default function Header() {
                 `}>
                 <div className="container max-w-7xl mx-auto px-6 w-full">
                     <div className="flex justify-between h-16 md:h-20 items-center w-full">
-                        <HashLink className="font-bold tracking-widest text-lg md:text-xl text-slate-900" smooth to="/#inicio">MASP</HashLink>
+                        <HashLink className="font-bold tracking-widest text-lg md:text-xl text-slate-800" smooth to="/#inicio">Suarez<span className='text-slate-950 font-bold'>DevLab</span>
+                        </HashLink>
+                       
 
                         <nav className="hidden md:flex text-sm font-medium text-slate-600  gap-8 items-center ">
 
