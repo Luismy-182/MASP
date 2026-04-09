@@ -14,8 +14,8 @@ const CTA = ({ id }) => {
 
                     >Contactar</a>
                     <a
-                        href="storage/miguel_suarez_backend_developer.pdf"
-                        download='miguel_suarez_backend.pdf'
+                        href="/storage/Miguel_Angel_Backend.pdf"
+                        download='Miguel_Angel_Backend.pdf'
                         className='border  border-slate-200 text-slate-700 px-6 py-3 rounded-md font-semibold hover:border-slate-900  flex-1 transition-colors duration-300'
                     >Ver CV</a>
 

@@ -28,8 +28,8 @@ const Hero = ({ id }) => {
                                 className="flex gap-2 py-2 px-3 lg:px-8 rounded-md border  hover:border-slate-900 transition-colors duration-200
                                 text-slate-600 border-slate-300 hover:text-slate-900 
                                  items-center hover:cursor-pointer"
-                                href="storage/miguel_suarez_backend_developer.pdf"
-                                download='miguel_suarez_backend.pdf'
+                                href="/storage/Miguel_Angel_Backend.pdf"
+                                download='Miguel_Angel_Backend.pdf'
                             >
                                 <FileDown
                                     className='inline w-4 h-4' />
