@@ -29,12 +29,12 @@ const MobileMenu = ({ onClose, isOpen }) => {
                     </div>
 
                     <nav className="flex flex-col text-sm font-medium text-slate-600  gap-8 items-start">
-                        <HashLink className="hover:text-slate-900 transition-colors duration-200" smooth to="#proyectos">Portafolio</HashLink>
+                        <HashLink className="hover:text-slate-900 transition-colors duration-200" smooth to="/#proyectos">Portafolio</HashLink>
 
 
-                        <HashLink className="hover:text-slate-900 transition-colors duration-200" smooth to="#sobre-mi">Sobre Mí</HashLink>
+                        <HashLink className="hover:text-slate-900 transition-colors duration-200" smooth to="/#sobre-mi">Sobre Mí</HashLink>
 
-                        <HashLink className="hover:text-slate-900 transition-colors duration-200" smooth to="#contacto">Contacto</HashLink>
+                        <HashLink className="hover:text-slate-900 transition-colors duration-200" smooth to="/#contacto">Contacto</HashLink>
 
                     </nav>
 
