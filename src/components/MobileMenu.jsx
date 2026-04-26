@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
 import { X } from 'lucide-react'
 const MobileMenu = ({ onClose, isOpen }) => {
@@ -29,12 +29,12 @@ const MobileMenu = ({ onClose, isOpen }) => {
                     </div>
 
                     <nav className="flex flex-col text-sm font-medium text-slate-600  gap-8 items-start">
-                        <HashLink className="hover:text-slate-900 transition-colors duration-200" smooth to="/#proyectos">Portafolio</HashLink>
+                        <HashLink className="hover:text-slate-900 transition-colors duration-200" smooth to="/#proyectos" onClick={onClose}>Portafolio</HashLink>
 
 
-                        <HashLink className="hover:text-slate-900 transition-colors duration-200" smooth to="/#sobre-mi">Sobre Mí</HashLink>
+                        <HashLink className="hover:text-slate-900 transition-colors duration-200" smooth to="/#sobre-mi" onClick={onClose}>Sobre Mí</HashLink>
 
-                        <HashLink className="hover:text-slate-900 transition-colors duration-200" smooth to="/#contacto">Contacto</HashLink>
+                        <HashLink className="hover:text-slate-900 transition-colors duration-200" smooth to="/#contacto" onClick={onClose}>Contacto</HashLink>
 
                     </nav>
 
