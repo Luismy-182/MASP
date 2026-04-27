@@ -74,8 +74,8 @@ const ProjectDetail = () => {
             <section>
                 <div className="mx-auto bg-white">
 
-                    <div className="md:flex justify-between lg:items-center gap-8 px-6 lg:px-24  py-12 lg:py-32 items-center w-full min-h-[calc(100vh-6rem)]">
-                        <div className="md:w-[35%] pb-12">
+                    <div className="md:flex md:flex-col lg:justify-between lg:items-center gap-8 px-6 lg:px-24  py-12 lg:py-32 items-center w-full min-h-[calc(100vh-6rem)]">
+                        <div className="md:w-[75%] lg:w-[35%] pb-12">
 
                             <h2 className="max-w-xl text-4xl md:text-5xl  font-bold tracking-tight leading-[1.1] text-slate-900 lg:translate-y-4">{heroTitle}</h2>
                             <p className="mt-4 md:mt-5 text-lg md:text-xl leading-relaxed text-slate-600 max-w-xl">{subtitle}</p>
@@ -124,7 +124,7 @@ const ProjectDetail = () => {
 
                         </div>
 
-                        <div className="md:w-[65%]  justify-center lg:justify-center rounded-xl">
+                        <div className="md:w-[75%]  lg:w-[65%]  justify-center lg:justify-center rounded-xl">
                             <img
                                 className="w-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.15)] lg:translate-x-16"
                                 src={heroImage}

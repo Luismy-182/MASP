@@ -14,7 +14,7 @@ const Hero = ({ id }) => {
             >
                 <div className="max-w-7xl px-6 mx-auto flex flex-col lg:flex-row  justify-between items-center lg:items-center gap-12">
                     {/* Textos y botones */}
-                    <div className="mt-6 md:mt-0">
+                    <div className="mt-6 md:mt-8 lg:mt-0">
                         <p className='text-sm text-slate-400 m-0 tracking-widest uppercase'>Backend · Arquitectura · Rendimiento</p>
                         <h1 className='max-w-xl text-4xl md:text-5xl  font-bold tracking-tight leading-[1.1] text-slate-900 lg:translate-y-4'>Ingeniería web orientada a rendimiento y escalabilidad.</h1>
 
